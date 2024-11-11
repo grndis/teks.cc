@@ -1,14 +1,14 @@
-import copy from 'copy-to-clipboard';
-import history from 'history/browser';
-import { MutableRefObject, useCallback, useEffect, useState } from 'react';
-import styled from 'styled-components';
+import copy from "copy-to-clipboard";
+import history from "history/browser";
+import { MutableRefObject, useCallback, useEffect, useState } from "react";
+import styled from "styled-components";
 
-import themes, { Themes } from '../style/themes';
-import { languages } from '../util/highlighting';
-import { saveToBytebin } from '../util/storage';
-import Button from './Button';
-import { ResetFunction } from './Editor';
-import MenuButton from './MenuButton';
+import themes, { Themes } from "../style/themes";
+import { languages } from "../util/highlighting";
+import { saveToBytebin } from "../util/storage";
+import Button from "./Button";
+import { ResetFunction } from "./Editor";
+import MenuButton from "./MenuButton";
 
 export interface EditorControlsProps {
   actualContent: string;
@@ -45,7 +45,7 @@ export default function EditorControls({
       return;
     }
     setSaving(true);
-    saveToBytebin(actualContent, language).then(pasteId => {
+    saveToBytebin(actualContent, language).then((pasteId) => {
       setSaving(false);
       setRecentlySaved(true);
       if (pasteId) {
@@ -53,7 +53,7 @@ export default function EditorControls({
           pathname: pasteId,
         });
         copy(window.location.href);
-        document.title = 'paste | ' + pasteId;
+        document.title = "paste | " + pasteId;
       }
     });
   }, [actualContent, language, recentlySaved]);
@@ -61,20 +61,20 @@ export default function EditorControls({
   useEffect(() => {
     const listener = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey) {
-        if (e.key === 's' || e.key === 'S') {
+        if (e.key === "s" || e.key === "S") {
           e.preventDefault();
           save();
         }
 
-        if (e.key === '=' || e.key === '-') {
+        if (e.key === "=" || e.key === "-") {
           e.preventDefault();
-          zoom(e.key === '=' ? 1 : -1);
+          zoom(e.key === "=" ? 1 : -1);
         }
       }
     };
 
-    window.addEventListener('keydown', listener);
-    return () => window.removeEventListener('keydown', listener);
+    window.addEventListener("keydown", listener);
+    return () => window.removeEventListener("keydown", listener);
   }, [save, zoom]);
 
   function reset() {
@@ -83,12 +83,12 @@ export default function EditorControls({
     }
 
     resetFunction.current();
-    setLanguage('plain');
+    setLanguage("plain");
     history.replace({
-      pathname: '/',
-      hash: '',
+      pathname: "/",
+      hash: "",
     });
-    document.title = 'paste';
+    document.title = "paste";
   }
 
   function unsetReadOnly() {
@@ -100,7 +100,7 @@ export default function EditorControls({
       <Section>
         <Button onClick={reset}>[new]</Button>
         <Button onClick={save}>
-          {recentlySaved ? '[link copied!]' : saving ? '[saving...]' : '[save]'}
+          {recentlySaved ? "[link copied!]" : saving ? "[saving...]" : "[save]"}
         </Button>
         <MenuButton
           label="language"
@@ -119,15 +119,6 @@ export default function EditorControls({
           setValue={setTheme}
           ids={Object.keys(themes) as (keyof Themes)[]}
         />
-        <Button
-          className="optional"
-          as="a"
-          href="https://github.com/lucko/paste#readme"
-          target="_blank"
-          rel="noreferrer"
-        >
-          [about]
-        </Button>
       </Section>
     </Header>
   );
@@ -139,8 +130,8 @@ const Header = styled.header`
   z-index: 10;
   width: 100%;
   height: 2em;
-  color: ${props => props.theme.primary};
-  background: ${props => props.theme.secondary};
+  color: ${(props) => props.theme.primary};
+  background: ${(props) => props.theme.secondary};
   display: flex;
   justify-content: space-between;
   user-select: none;

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import Editor from './components/Editor';
-import { loadFromBytebin } from './util/storage';
+import { useEffect, useState } from "react";
+import Editor from "./components/Editor";
+import { loadFromBytebin } from "./util/storage";
 
 const INITIAL = Symbol();
 const LOADING = Symbol();
@@ -11,8 +11,8 @@ type LoadingState = typeof INITIAL | typeof LOADING | typeof LOADED;
 export default function App() {
   const [pasteId] = useState<string | undefined>(getPasteIdFromUrl);
   const [state, setState] = useState<LoadingState>(INITIAL);
-  const [forcedContent, setForcedContent] = useState<string>('');
-  const [actualContent, setActualContent] = useState<string>('');
+  const [forcedContent, setForcedContent] = useState<string>("");
+  const [actualContent, setActualContent] = useState<string>("");
   const [contentType, setContentType] = useState<string>();
 
   function setContent(content: string) {
@@ -23,7 +23,7 @@ export default function App() {
   useEffect(() => {
     if (pasteId && state === INITIAL) {
       setState(LOADING);
-      setContent('Loading...');
+      setContent("Loading...");
 
       loadFromBytebin(pasteId).then(({ ok, content, type }) => {
         if (ok) {
