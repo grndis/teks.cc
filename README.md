@@ -40,7 +40,7 @@ Ctrl/Cmd + -  : Perkecil teks
 ## Panduan Penggunaan
 
 ### Pengguna
-1. Kunjungi teks.cc
+1. Kunjungi [teks.cc](https://github.com/grndis/teks.cc)
 2. Tulis atau tempel kode Anda
 3. Simpan dengan tombol save atau Ctrl+S
 4. Bagikan link yang ter-generate
@@ -49,7 +49,7 @@ Ctrl/Cmd + -  : Perkecil teks
 
 ```bash
 # Clone repositori
-git clone [url-teks.cc]
+git clone https://github.com/grndis/teks.cc
 
 # Instal dependensi
 npm install
