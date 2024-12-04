@@ -26,7 +26,7 @@ export async function loadFromBytebin(id: string): Promise<LoadResult> {
         resp.headers.get('content-type') as string
       );
 
-      document.title = 'pastes | ' + id;
+      document.title = 'teks.cc - ' + id;
       return { ok: true, content, type };
     } else {
       return { ok: false };
