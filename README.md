@@ -1,46 +1,112 @@
-# Getting Started with Create React App
+# teks.cc - Platform Berbagi Teks & Kode Modern
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Selamat datang di teks.cc, platform berbagi teks & kode yang menggabungkan kesederhanaan dengan kemampuan editor modern. Dibangun menggunakan React dan Monaco Editor untuk memberikan pengalaman coding yang optimal.
 
-## Available Scripts
+> Proyek ini adalah fork dari [paste](https://github.com/lucko/paste) yang dibuat oleh [lucko](https://github.com/lucko). Terima kasih atas kontribusi dan kode dasarnya yang luar biasa.
 
-In the project directory, you can run:
+## Fitur Unggulan
 
-### `npm start`
+### Editor Profesional
+- Syntax highlighting untuk berbagai bahasa pemrograman
+- Indentasi otomatis yang cerdas
+- Nomor baris dan code folding
+- Performa yang responsif
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Antarmuka yang Dapat Disesuaikan
+- Pilihan tema terang dan gelap
+- Kustomisasi ukuran font (10-22px)
+- Pengaturan yang tersimpan otomatis
+- Tampilan yang bersih dan fokus
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Kemudahan Berbagi
+- Generate link unik untuk setiap kode
+- Penyalinan link otomatis saat menyimpan
+- Penanda baris kode spesifik via URL (#L1-L5)
+- Berbagi kode tanpa login
 
-### `npm test`
+### Pintasan Keyboard
+```
+Ctrl/Cmd + S  : Simpan kode
+Ctrl/Cmd + =  : Perbesar teks
+Ctrl/Cmd + -  : Perkecil teks
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Fitur Tambahan
+- Integrasi pencarian Google untuk teks terpilih
+- Optimasi untuk perangkat mobile
+- Performa yang cepat
+- Antarmuka yang intuitif
 
-### `npm run build`
+## Panduan Penggunaan
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pengguna
+1. Kunjungi teks.cc
+2. Tulis atau tempel kode Anda
+3. Simpan dengan tombol save atau Ctrl+S
+4. Bagikan link yang ter-generate
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pengembang
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Clone repositori
+git clone [url-teks.cc]
 
-### `npm run eject`
+# Instal dependensi
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Jalankan di lingkungan lokal
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tips Penggunaan
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **Berbagi Kode Spesifik**
+   - Gunakan fitur highlight baris
+   - Link akan menyertakan nomor baris
+   - Ideal untuk code review
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Kustomisasi Editor**
+   - Sesuaikan tema dengan preferensi
+   - Atur ukuran font untuk kenyamanan
+   - Pengaturan tersimpan otomatis
 
-## Learn More
+3. **Penggunaan Mobile**
+   - Tampilan responsif
+   - Mode baca untuk link yang dibagikan
+   - Antarmuka yang optimal untuk layar kecil
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Kontribusi
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Kami mengundang Anda untuk berkontribusi dalam pengembangan teks.cc:
+
+1. Fork repositori
+2. Buat branch untuk fitur baru
+3. Implementasi perubahan
+4. Ajukan Pull Request
+5. Tim kami akan melakukan review
+
+## Dukungan
+
+- Laporkan masalah melalui GitHub Issues
+- Diskusikan ide di forum Discussions
+- Dokumentasi tersedia di Wiki
+
+## Apresiasi
+
+Terima kasih kepada:
+- [lucko](https://github.com/lucko) dan proyek [paste](https://github.com/lucko/paste)
+- Tim Monaco Editor
+- Komunitas React
+- Para kontributor
+- Pengguna setia teks.cc
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah lisensi MIT, mengikuti lisensi dari proyek asli [paste](https://github.com/lucko/paste).
+
+---
+
+Mulai gunakan teks.cc untuk berbagi teks & kode Anda dengan lebih efisien. 
+Untuk pertanyaan atau saran, silakan hubungi tim kami.
+
+Selamat coding! ✨
